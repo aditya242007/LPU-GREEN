@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            width: 100%;
+            padding: 40px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .contact-container h2 {
+            font-size: 28px;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .form-section,
+        .details-section {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .form-section h3,
+        .details-section h3 {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .form-section input,
+        .form-section select,
+        .form-section textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .form-section textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .details-section {
+            padding-left: 20px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .details-section p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .details-section strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #000;
+        }
+
+        .contact-container .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #333;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="form-section">
+            <h2>Contact Us</h2>
+            <h3>Online Inquiry</h3>
+            <form>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone" required>
+                <select name="interest" required>
+                    <option value="">Select An Interest</option>
+                    <option value="buying">Buying Tree</option>
+                    <option value="selling">Website</option>
+                    <option value="renting">Details about Trees</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea name="message" placeholder="Message" required></textarea>
+            </form>
+        </div>
+        
+        <div class="details-section">
+            <h3>Contact Details</h3>
+            <p>xyz@gmail.com<br>91+ 00000000</p>
+            <strong>Address</strong>
+            <p>23 Rajendra nagar<br>Indore,MP</p>
+            <strong>Office2</strong>
+            <p>3 Futi Kuti<br>Indore,MP</p>
+            <strong>Coustmer services</strong>
+            <p>54 Vijay nagar<br>Indore,MP</p>
+        </div>
+    </div>
+</body>
+</html>

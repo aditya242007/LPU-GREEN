@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link  href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://t4.ftcdn.net/jpg/08/87/70/65/240_F_887706599_EH2aha8Ru7VyXQ71ngVK8Yvb4apUOFQg.jpg'); /* Path to your image */
+            background-size: cover;
+            background-position: center;
+        }
+    
+        .login-box {
+            background-color: rgba(0, 0, 0, 0.8); /* Slight transparency */
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 7px 15px rgb(4, 4, 4);
+            text-align: center;
+            width: 350px;
+        }
+    
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #ffffff;
+        }
+    
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 30px;
+            background-color: #f7f7f7;
+        }
+    
+        .input-group i {
+            margin-right: 10px;
+            color: #bbb;
+        }
+    
+        input {
+            border: none;
+            outline: none;
+            background: none;
+            width: 100%;
+            font-size: 14px;
+        }
+    
+        .forgot-password {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+    
+        .forgot-password a {
+            color: #d1cfcf;
+            text-decoration: none;
+            font-size: 12px;
+        }
+    
+        .forgot-password a:hover {
+            color: #fffefe;
+        }
+    
+        .login-btn {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            border: none;
+            color: white;
+            font-size: 16px;
+            padding: 12px;
+            width: 100%;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+    
+        .login-btn:hover {
+            background: linear-gradient(135deg, #a777e3, #6e8efb);
+        }
+    
+        .social-login {
+            margin: 20px 0;
+        }
+    
+        .social-login a {
+            margin: 0 10px;
+            text-decoration: none;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background: #ddd;
+            border-radius: 50%;
+            color: #555;
+            font-size: 18px;
+            transition: background 0.3s ease;
+        }
+    
+        .social-login a:hover {
+            background: #bbb;
+        }
+    
+        .signup-link {
+            text-decoration: none;
+            color: #6e8efb;
+            font-size: 14px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+    
+        .signup-link:hover {
+            text-decoration: underline;
+        }
+    
+        .show-password {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    
+        .show-password input {
+            margin-right: 5px;
+        }
+    
+        .show-password label {
+            color: white;
+            text-align: left;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-group">
+                    <i class="ri-user-fill"></i>
+                    <input type="text" placeholder="Type your username" required>
+                </div>
+                <div class="input-group">
+                    <i class="ri-lock-password-fill"></i>
+                    <input type="password" id="password" placeholder="Type your password" required>
+                </div>
+<!--  password  -->
+                <div class="show-password">
+                    <input type="checkbox" id="showPassword">
+                    <label for="showPassword">Show Password</label>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <p>Or Sign Up Using</p>
+                <div class="social-login">
+                    <a href="https://www.facebook.com/login.php/" class="facebook"><i class="ri-facebook-circle-fill"></i></a>
+                    <a href="https://x.com/i/flow/login" class="twitter"><i class="ri-twitter-x-fill"></i></a>
+                    <a href="https://www.google.com/intl/en-GB/account/about/" class="google"><i class="ri-google-fill"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const passwordInput = document.querySelector("#password");
+    const showPasswordCheckbox = document.querySelector("#showPassword");
+
+    // Toggle password visibility
+    showPasswordCheckbox.addEventListener("change", function () {
+        if (this.checked) {
+            // Show password
+            passwordInput.type = "text";
+        } else {
+            // Hide password
+            passwordInput.type = "password";
+        }
+    });
+});
+    </script>
+</body>
+</html>
